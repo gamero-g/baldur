@@ -1750,15 +1750,50 @@ footer {
 
         border: 1px solid rgb(99, 0, 102);
         padding: 5rem;
-        border-radius: 2rem;
+    
         tr:nth-child(2n) {
-            background-color: #141414;
+            background-color: #333333;
         }
+        width: 100%;
         padding: 2rem;
         background-color: rgb(0, 0, 0);
         img {
             width: 100px;
         }
+
+        tfoot {
+            background-color: #571d5f;
+        }
+    }
+
+    .carrito-vacio {
+        border: 1px solid rgb(99, 0, 102);
+        padding: 5rem;        
+        width: 100%;
+        padding: 2rem;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .carrito-acciones {
+        margin-top: 1rem;
+        padding: 2rem;
+        width: 100%;
+        background-color: #35202e;
+
+        .vaciar {
+            background-color: rrgb(202, 172, 202);
+            border-radius: .5rem;
+            padding: .5rem 1rem;
+            text-decoration: none;
+            color: rgb(99, 0, 102);
+            display: block;
+            width: fit-content;
+
+            &:hover {
+                opacity: .9;
+            }
+        }
+       
     }
 }
 
@@ -1770,4 +1805,23 @@ footer {
     color: white;
     display: block;
     width: fit-content;
+}
+
+.comprado {
+    background-color: green;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+}
+
+.user-avatar-nav {
+    max-width: 25px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info-direccion {
+    background-color: black;
+    padding: 2rem;
+    margin-bottom: 1rem;
 }

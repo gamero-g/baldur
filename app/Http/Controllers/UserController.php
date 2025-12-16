@@ -68,7 +68,7 @@ class UserController extends Controller
 
     public function updateName(Request $request) {
         $request->validate([
-            'name' => 'required|min:5|max:255'
+            'name' => 'required|min:3|max:255'
         ], 
         [
             'name.required' => 'El nombre es obligatorio',

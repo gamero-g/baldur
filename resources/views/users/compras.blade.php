@@ -15,6 +15,7 @@
                 <thead>
                     <tr>
                         <th scope="col" class="p-4 text-center">Estado</th>
+                        <th scope="col" class="p-4 text-center">Fecha de compra</th>
                         <th scope="col" class="p-4 text-center">Productos</th>
                         <th scope="col" class="p-4 text-center">Total</th>
                     </tr>
@@ -23,10 +24,11 @@
                     @foreach ($usuario->buys as $compra)
                         <tr>
                             <td align="center" valign="middle" class="p-4">{{ $compra->estado }}</td>
+                            <td align="center" valign="middle" class="p-4">{{ $compra->created_at->format('Y-m-d') }}</td>
                             <td align="center" valign="middle" class="p-4">
                                 @foreach ($compra->products as $producto)
-                                    <span class="d-block">- {{ $producto->titulo }}</span>
-                                    <span> ${{ $producto->precio }}</span>
+                                    <span class="d-block">{{ $producto->titulo }}</span>
+                                    <span>Valor: ${{ $producto->precio }}</span>
                                 @endforeach
                             </td>
                             <td align="center" valign="middle" class="p-4">

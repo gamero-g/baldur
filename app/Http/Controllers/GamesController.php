@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\BgClass;
 use App\Models\Game;
 use App\Models\Platform;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
@@ -27,10 +29,21 @@ class GamesController extends Controller
 
     public function gameById(int $id) {
       $game = Game::with('bg_classes', 'platforms')->findOrFail($id);
-
+      $yaComprado = false;
+      if(Auth::check()) {
+        $userCompras = User::with('buys.products')->findOrFail(Auth::id());
+        foreach ($userCompras->buys as $compra) {
+          foreach ($compra->products as $product) {
+            if($product->juego_id === $game->juego_id) {
+              $yaComprado = true;
+            } 
+          }
+        }
+      }
       return view('games.details', [
         'game' => $game,
-        'carrito' => session()->get('carrito', [])
+        'carrito' => session()->get('carrito', []),
+        'yaComprado' => $yaComprado
       ]);
     }
 

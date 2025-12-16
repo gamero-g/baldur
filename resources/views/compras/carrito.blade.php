@@ -1,40 +1,82 @@
 <?php
-    $total = 0;
+    $subtotal = 0;
 ?>
 <x-layouts.main>
     <x-slot:title>Carrito</x-slot:title>
     <section id="section-carrito" class="container text-light">
         <h1>CARRITO</h1>
-        <div class="table-responsive">
-            <table>
-                <thead>
-                    <tr>
-                        <th scope="col" class="p-4 text-center">Producto</th>
-                        <th scope="col" class="p-4 text-center">Precio</th>
-                        {{-- <th scope="col" class="p-4 text-center">Total</th> --}}
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($productos as $producto)
+        @if (session('feedback.message'))
+            <div class="alert alert-{{ session('feedback.type', 'success') }}">
+                {{ session('feedback.message') }}
+            </div>
+        @endif
+        @if (count($productos) > 0)
+            <div class="table-responsive">
+                <table>
+                    <thead>
                         <tr>
-                            <td align="center" valign="middle" class="p-4">
-                                <img src="../{{ $producto->portada }}">
-                                {{ $producto->titulo }}
-                            </td>
-                            <td align="center" valign="middle" class="p-4">
-                              ${{ $producto->precio }}
-                            </td>
+                            <th scope="col" class="p-4 text-center">Producto</th>
+                            <th scope="col" class="p-4 text-center">Precio</th>
+                            <th scope="col" class="p-4 text-center">Acciones</th>
                         </tr>
-                        {{ $total += $producto->precio }}
-                    @endforeach
-                    <tr >
-                        <td align="center" valign="middle" class="w-full d-flex justify-content-between align-items-center p-3">
-                            <span>Total</span>
-                            <span>${{$total}}</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                    </thead>
+                    <tbody>
+                        @foreach ($productos as $producto)
+                            <tr>
+                                <td class="p-4 d-flex flex-column justify-content-center align-items-center">
+                                    @if (\Storage::disk('public')->exists($producto->portada))  
+                                        <img src="{{ \Storage::url($producto->portada) }}"> 
+                                    @else
+                                        <img src="img/{{ $producto->portada}}"></a>
+                                    @endif    
+                                    {{ $producto->titulo }}
+                                </td>
+                                <td align="center" valign="middle" class="p-4">
+                                ${{ $producto->precio }}
+                                </td>
+                                <td align="center" valign="middle" class="p-4">
+                                <form action="{{ route('compras.eliminar', ['id' => $producto->juego_id]) }}" method="POST">
+                                    @csrf
+                                    <button type="submit" class=" btn-action border-0 outline-0"><i class="fa-solid fa-xmark"></i></button>
+                                </form>
+                                </td>
+                            </tr>
+                            <?php $subtotal += $producto->precio ?>
+                        @endforeach
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td  colspan="1" align="center" valign="middle" class="p-4"><strong>Subtotal</strong></td>
+                            <td  colspan="2" align="center" valign="middle" class="p-4"><strong>${{ $subtotal }}</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="carrito-acciones d-flex gap-4 justify-content-between">
+                <div class="d-flex gap-4">
+                    <div>
+                        <a href="{{ route('compras.checkout')}}" class="btn-action">Continuar con la compra</a>
+                    </div>
+                    <div>
+                        <a href="{{ route('games.all') }}" class="btn-action">Seguir comprando</a>
+                    </div>
+                </div>
+                <div>
+                    <form action="{{ route('compras.vaciar') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="vaciar border-0 outline-0">Vaciar carrito</button>
+                    </form>
+                </div>
+            </div>
+            
+        @else
+            <div class="carrito-vacio d-flex flex-column align-items-center justify-content-center">
+                <h2>Tu carrito está vacío!</h2>
+                <div>
+                    <a href="{{ route('games.all') }}" class="btn-action">Ver productos</a>
+                </div>
+            </div>
+        @endif
+        
     </section>
 </x-layouts.main>

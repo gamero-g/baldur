@@ -4,6 +4,8 @@ use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GameController;
 use App\Http\Middleware\CheckUserRole;
+use App\Http\Middleware\VerificarPagoSignature;
+use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Support\Facades\Route;
 
 
@@ -186,12 +188,35 @@ Route::post('/perfil/editar-informacion', [\App\Http\Controllers\UserController:
     ->middleware('auth');
 
 
-// CARRITO
+// MERCADO PAGO
 
-Route::get('/carrito', [\App\Http\Controllers\CarritoController::class, 'carrito'])
+Route::get('/carrito', [\App\Http\Controllers\MecadoPagoController::class, 'carrito'])
     ->name('compras.carrito')
     ->middleware('auth');
 
-Route::post('/carrito/{id}/agregar', [\App\Http\Controllers\CarritoController::class, 'agregarAlCarrito'])
+Route::post('/carrito/{id}/agregar', [\App\Http\Controllers\MecadoPagoController::class, 'agregarAlCarrito'])
     ->name('compras.agregarAlCarrito')
     ->middleware('auth');
+
+Route::post('/carrito/{id}/eliminar', [\App\Http\Controllers\MecadoPagoController::class, 'eliminarDelCarrito'])
+    ->name('compras.eliminar')
+    ->middleware('auth');
+
+Route::post('/carrito/vaciar', [\App\Http\Controllers\MecadoPagoController::class, 'vaciarCarrito'])
+    ->name('compras.vaciar')
+    ->middleware('auth');
+
+Route::get('/carrito/completar-compra', [\App\Http\Controllers\MecadoPagoController::class, 'checkout'])
+    ->name('compras.checkout')
+    ->middleware('auth');
+
+Route::get('/carrito/completar-compra/success', [\App\Http\Controllers\MecadoPagoController::class, 'success'])
+    ->name('compras.success');
+    
+Route::get('/carrito/completar-compra/failure', [\App\Http\Controllers\MecadoPagoController::class, 'failure'])
+    ->name('compras.failure');
+ 
+Route::post('/carrito/confirmar-compra', [\App\Http\Controllers\MecadoPagoController::class, 'verificarPagoMiddleware'])
+    ->middleware(VerificarPagoSignature::class)
+    ->withoutMiddleware(VerifyCsrfToken::class)
+    ->name('compras.verificar-pago');

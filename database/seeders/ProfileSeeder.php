@@ -18,13 +18,13 @@ class ProfileSeeder extends Seeder
                 'perfil_id' => 1,
                 'usuario_fk' => 1,
                 'avatar' => 'baldurs-3.webp',
-                'direccion' => 'A veces toca decir la p madre y seguir 123'
+                'direccion' => 'Calle inventada 123'
             ],
             [
                 'perfil_id' => 2,
                 'usuario_fk' => 2,
                 'avatar' => 'bg-2.webp',
-                'direccion' => 'Con todo respeto que p*j* (con todo respeto en serio) 123'
+                'direccion' => 'Ojala me vaya bien 123'
             ],
         ]);
     }

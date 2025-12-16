@@ -38,9 +38,11 @@
                             <li class="nav-item">
                                 <x-nav-link routeto="games.all" class="text-light">Productos</x-nav-link>
                             </li>
+                            @auth
                             <li class="nav-item">
                                 <x-nav-link routeto="compras.carrito" class="text-light"><i class="fa-solid fa-cart-shopping"></i></x-nav-link>
                             </li>
+                            @endauth
                             @guest
                             <li class="nav-item">
                                 <x-nav-link routeto="auth.login.show">Iniciar seisón</x-nav-link>
@@ -56,7 +58,15 @@
                             @endif
                             <div class="dropdown ms-2">
                                 <button class="btn-action border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->name }} 
+                                    @if(Auth::user()->profile->avatar !== null)
+                                        @if (\Storage::disk('public')->exists(Auth::user()->profile->avatar))  
+                                         <img src="{{ \Storage::url(Auth::user()->profile->avatar) }}" class="user-avatar-nav">
+                                        @else
+                                            <img src="img/{{ Auth::user()->profile->avatar }}" class="user-avatar-nav"></a>
+                                        @endif                                        
+                                    @endif
+                                   
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li>
