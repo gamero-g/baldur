@@ -1,0 +1,23 @@
+services:
+  app:
+    image: ghcr.io/gamero-g/baldur:latest
+    container_name: baldur-app
+    ports:
+      - "8084:80"
+    volumes:
+      - /mnt/cache/appdata/baldur/.env:/var/www/html/.env
+      - /mnt/user/appdata/baldur/storage:/var/www/html/storage
+      - /mnt/user/appdata/baldur/bootstrap-cache:/var/www/html/bootstrap/cache
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:11
+    container_name: baldur-db
+    environment:
+      MARIADB_DATABASE: baldur
+      MARIADB_USER: baldur_user
+      MARIADB_PASSWORD: baldur_pass
+      MARIADB_ROOT_PASSWORD: rootpass123
+    volumes:
+      - /mnt/user/appdata/baldur/db:/var/lib/mysql
