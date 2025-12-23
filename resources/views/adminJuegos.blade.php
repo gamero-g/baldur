@@ -30,7 +30,7 @@
                     <tbody>
                         @foreach ($games as $game)
                             <tr>
-                                <td class="text-center align-middle p-4"><img src="{{ \Storage::url($game->portada) }}" alt="Portada de {{ $game->titulo }}"></td>
+                                <td class="text-center align-middle p-4"><img src="{{ asset($game->portada) }}" alt="Portada de {{ $game->titulo }}"></td>
                                 <td class="text-center align-middle p-4">{{ $game->titulo }}</td>
                                 <td class="text-center align-middle p-4">{{ $game->fecha_lanzamiento }}</td>
                                 <td class="text-center align-middle p-4">${{ $game->precio }}</td>

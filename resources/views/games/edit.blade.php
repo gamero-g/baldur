@@ -75,7 +75,7 @@
                 <div>
                     <p>Portada actual</p>
                     @if ($game->portada &&  \Storage::exists($game->portada)) 
-                        <img src="{{ \Storage::url($game->portada) }}" alt="Portada de {{ $game->titulo }}" class="img-fluid"></img>
+                        <img src="{{ asset($game->portada) }}" alt="Portada de {{ $game->titulo }}" class="img-fluid"></img>
                     @else
                         <p>No hay una portada</p>
                     @endif

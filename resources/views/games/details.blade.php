@@ -11,7 +11,7 @@
             <div class="d-flex flex-column-reverse flex-lg-row bg align-items-center justify-center">
                 <div>
                     <div>
-                        <img src="{{ \Storage::url($game->portada) }}" alt="Portada de {{ $game->titulo }}">
+                        <img src="{{ asset($game->portada) }}" alt="Portada de {{ $game->titulo }}">
                     </div>
                 </div>
                 <div class="bajar d-flex flex-column align-items-center">
