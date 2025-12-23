@@ -25,7 +25,7 @@
                             <tr>
                                 <td class="p-4 d-flex flex-column justify-content-center align-items-center">
                                     @if (\Storage::disk('public')->exists($producto->portada))  
-                                        <img src="{{ \Storage::url($producto->portada) }}"> 
+                                        <img src="{{ asset($producto->portada) }}"> 
                                     @else
                                         <img src="img/{{ $producto->portada}}"></a>
                                     @endif    
