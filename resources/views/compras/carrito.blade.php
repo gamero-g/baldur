@@ -24,12 +24,7 @@
                         @foreach ($productos as $producto)
                             <tr>
                                 <td class="p-4 d-flex flex-column justify-content-center align-items-center">
-                                    @if (\Storage::disk('public')->exists($producto->portada))  
-                                        <img src="{{ asset($producto->portada) }}"> 
-                                    @else
-                                        <img src="img/{{ $producto->portada}}"></a>
-                                    @endif    
-                                    {{ $producto->titulo }}
+                                    <img src="{{ asset($producto->portada) }}" alt="Portada de {{ $producto->titulo }}">
                                 </td>
                                 <td align="center" valign="middle" class="p-4">
                                 ${{ $producto->precio }}
