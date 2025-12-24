@@ -30,7 +30,7 @@
                             </td>
                             <td align="center" valign="middle" class="p-4">
                                @if (\Storage::disk('public')->exists($producto->portada))  
-                                    <img src="{{ asset($producto->portada) }}"> 
+                                    <img src="{{ \Storage::url($producto->portada) }}"> 
                                 @else
                                     <img src="img/{{ $producto->portada}}"></a>
                                 @endif    
