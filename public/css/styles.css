@@ -474,7 +474,10 @@ nav.navbar {
 
         img {
             max-width: 50%;
-            transform: translateX(250px);
+            /* transform: translateX(250px); */
+            max-width: 25%;
+            display: block;
+            margin: auto;
         }
 
         .triangulo {
