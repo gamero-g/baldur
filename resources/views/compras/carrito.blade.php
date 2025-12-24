@@ -24,11 +24,21 @@
                         @foreach ($productos as $producto)
                             <tr>
                                 <td class="p-4 d-flex flex-column justify-content-center align-items-center">
-                                    @if (\Storage::disk('public')->exists($producto->portada))  
-                                        <img src="{{ \Storage::url($producto->portada) }}"> 
+                                    @php
+                                        $portada = $producto->portada;
+                                    @endphp
+
+                                    @if (\Storage::disk('public')->exists($portada))
+                                        <img src="{{ \Storage::url($portada) }}" alt="Portada de {{ $producto->titulo }}">
                                     @else
-                                        <img src="img/{{ $producto->portada}}"></a>
-                                    @endif    
+                                        @php
+                                        $fallback = \Illuminate\Support\Str::startsWith($portada, ['img/', '/img/'])
+                                            ? ltrim($portada, '/')
+                                            : 'img/'.$portada;
+                                        @endphp
+
+                                        <img src="{{ asset($fallback) }}" alt="Portada de {{ $producto->titulo }}">
+                                    @endif
                                     {{ $producto->titulo }}
                                 </td>
                                 <td align="center" valign="middle" class="p-4">
