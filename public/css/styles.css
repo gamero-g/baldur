@@ -614,16 +614,16 @@ nav.navbar {
         
     }
 
-    #carouselPersonajes {
+    /* #carouselPersonajes {
         border-bottom: 2px solid white;
-    }
+    } */
 
 
     #section-4 {
         min-height: 100vh;
         position: relative;
         z-index: 2;
-        border-top: 2px solid white;
+        /* border-top: 2px solid white; */
 
         h2 {
             font-size: 3rem;
@@ -879,7 +879,7 @@ nav.navbar {
     }
 
     img {
-        max-width: 250px;
+        max-width: 450px;
     }
 }
 
@@ -1407,6 +1407,9 @@ footer {
     }
 }
 
+#section-1-5 {
+    margin-top: 1rem;
+}
  
 @media screen and (max-width: 480px) {
     #home {

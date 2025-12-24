@@ -13,7 +13,7 @@
                 <a href="#section-3" class="btn-action">Conseguir</a>
             </div>
         </section>
-        <section class="mi-fade p-3">
+        <section id="section-1-5" class="mi-fade p-3">
             <div class="container">
                 <h2 class="text-center pt-4">Awards</h2>
                 <div class="d-flex overflow-hidden p-3" id="carrousel">
