@@ -513,7 +513,7 @@ nav.navbar {
             border: 2px solid white;
             border-radius: 1rem;
             color: white;
-            width: 40ch;
+            width: 80%;
             max-width: 100%;
             padding: 1rem;
             z-index: 1;
@@ -531,6 +531,7 @@ nav.navbar {
           
         }
         .mask-1 {
+            padding-bottom: 2rem;
             position: relative;
             -webkit-mask-image: url('../img/bg-personajes/dark-mask.png');
             mask-image: url('../img/bg-personajes/dark-mask.png');
