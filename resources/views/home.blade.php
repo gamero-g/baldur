@@ -40,7 +40,7 @@
                             <div class="bg-1">
                                 <div class="mask-1">
                                     <div class="triangulo"></div> 
-                                    <h2>ASARTIAN</h2>
+                                    <h2>ASTARION</h2>
                                     <p class="mx-auto">Astarion merodeó la noche como un engendro vampírico durante siglos, obligado a seguir las órdenes de su sádico amo, Cazador: seducir a todo idiota con pulso y atraerlo de vuelta a su guarida. Libre por ahora, Astarion hará lo que sea para mantener su vida a la luz. Solo ve una manera de asegurar su libertad para siempre: volverse mucho más poderoso de lo que su antiguo abusador jamás soñó ser.</p>
                                     <img src="img/personajes/hero-astarion.webp" class="img-fluid" alt="Ilustración de Astarion de Baldur's Gate 3">
                                 </div>
