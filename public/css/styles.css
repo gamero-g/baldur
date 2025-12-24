@@ -505,6 +505,7 @@ nav.navbar {
         }
 
         p {
+            margin-right: 9rem;
             position: relative;
             margin-left: 30px;
             margin-top: 0.5rem;
@@ -1651,4 +1652,22 @@ footer {
     background-color: black;
     padding: 2rem;
     margin-bottom: 1rem;
+}
+
+@media (max-width: 1049px){
+  #home #section-2 .personaje-body{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #home #section-2 .personaje-body .personaje-img{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #home #section-2 .personaje-body .personaje-text{
+    max-width: 100%;
+    width: 100%;
+    margin: 1rem;
+  }
 }
