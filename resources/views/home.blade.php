@@ -41,8 +41,10 @@
                                 <div class="mask-1">
                                     <div class="triangulo"></div> 
                                     <h2>ASTARION</h2>
-                                    <p class="mx-auto">Astarion merodeó la noche como un engendro vampírico durante siglos, obligado a seguir las órdenes de su sádico amo, Cazador: seducir a todo idiota con pulso y atraerlo de vuelta a su guarida. Libre por ahora, Astarion hará lo que sea para mantener su vida a la luz. Solo ve una manera de asegurar su libertad para siempre: volverse mucho más poderoso de lo que su antiguo abusador jamás soñó ser.</p>
-                                    <img src="img/personajes/hero-astarion.webp" class="img-fluid" alt="Ilustración de Astarion de Baldur's Gate 3">
+                                    <div class="personaje-body">
+                                        <p class="mx-auto">Astarion merodeó la noche como un engendro vampírico durante siglos, obligado a seguir las órdenes de su sádico amo, Cazador: seducir a todo idiota con pulso y atraerlo de vuelta a su guarida. Libre por ahora, Astarion hará lo que sea para mantener su vida a la luz. Solo ve una manera de asegurar su libertad para siempre: volverse mucho más poderoso de lo que su antiguo abusador jamás soñó ser.</p>
+                                        <img src="img/personajes/hero-astarion.webp" class="img-fluid" alt="Ilustración de Astarion de Baldur's Gate 3">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -53,9 +55,11 @@
                                 <div class="mask-1">
                                     <div class="triangulo"></div> 
                                     <h2>LAEZEL</h2>
-                                    <p  class="mx-auto">
-                                        Caída en la Costa de la Espada desde las estrellas, Lae'zel es una guerrera feroz, incluso para los estándares de la militante sociedad githyanki. Ante la posibilidad de convertirse en una azotamentes, el monstruo a cuya derrota dedicó su vida, deberá demostrar su valía y ganarse el derecho a reunirse con su pueblo, si no la ejecutan primero. ¿Serán suficientes la fuerza y ​​la determinación de Lae'zel para demostrar su valía a la reina Vlaakith, o deberá recorrer otro camino en el exilio?</p>
-                                    <img src="img/personajes/hero-laezel.webp" class="img-fluid" alt="Ilustración de Laezel de Baldur's Gate 3">
+                                    <div class="personaje-body">
+                                        <p  class="mx-auto">
+                                            Caída en la Costa de la Espada desde las estrellas, Lae'zel es una guerrera feroz, incluso para los estándares de la militante sociedad githyanki. Ante la posibilidad de convertirse en una azotamentes, el monstruo a cuya derrota dedicó su vida, deberá demostrar su valía y ganarse el derecho a reunirse con su pueblo, si no la ejecutan primero. ¿Serán suficientes la fuerza y ​​la determinación de Lae'zel para demostrar su valía a la reina Vlaakith, o deberá recorrer otro camino en el exilio?</p>
+                                        <img src="img/personajes/hero-laezel.webp" class="img-fluid" alt="Ilustración de Laezel de Baldur's Gate 3">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -66,9 +70,11 @@
                                 <div class="mask-1">
                                     <div class="triangulo"></div> 
                                     <h2>KARLACH</h2>
-                                    <p  class="mx-auto">
-                                        Tras escapar del Infierno, Karlach por fin se ha liberado del archidiablo Zariel, pero no del motor infernal que Zariel le implantó en el pecho. Con su primera experiencia de libertad en diez años, Karlach ansía encontrar una solución para el motor que arde cada vez más antes de que la consuma por completo. ¿Pero qué es aún más importante en su mente? Explorar, encontrar viajeros con ideas afines, enamorarse (o sentir lujuria)... y vengarse del hombre que la vendió a Zariel hace tantos años.</p>
-                                    <img src="img/personajes/hero-karlach.webp" class="img-fluid" alt="Ilustración de Karlach de Baldur's Gate 3">
+                                    <div class="personaje-body">
+                                        <p  class="mx-auto">
+                                            Tras escapar del Infierno, Karlach por fin se ha liberado del archidiablo Zariel, pero no del motor infernal que Zariel le implantó en el pecho. Con su primera experiencia de libertad en diez años, Karlach ansía encontrar una solución para el motor que arde cada vez más antes de que la consuma por completo. ¿Pero qué es aún más importante en su mente? Explorar, encontrar viajeros con ideas afines, enamorarse (o sentir lujuria)... y vengarse del hombre que la vendió a Zariel hace tantos años.</p>
+                                        <img src="img/personajes/hero-karlach.webp" class="img-fluid" alt="Ilustración de Karlach de Baldur's Gate 3">
+                                    </div>
                                 </div>
                             </div>
                         </div>
