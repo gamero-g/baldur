@@ -544,24 +544,6 @@ nav.navbar {
             mask-size: 100% 100%;
             mask-position: center;
         }
-        .personaje-body {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .personaje-body p {
-            margin-left: 30px;
-            width: 40ch;
-            max-width: 100%;
-            margin-top: 0;
-        }
-        .personaje-body img {
-            transform: none !important;
-            max-width: 50%;
-            width: 100%;
-            height: auto;
-        }
     }
 
     #section-3 {
@@ -1459,10 +1441,6 @@ footer {
                 width: 30ch;
                 padding: 1rem;
             }
-            .personaje-body p {
-                width: 30ch;
-                margin: 1rem;
-            }
         }
         #section-4 {
             h2 {
@@ -1639,17 +1617,6 @@ footer {
                 color: white;
                 width: 80%;
                 padding: 1rem;
-            }
-            .personaje-body {
-                flex-direction: column;
-                align-items: center;
-            }
-            .personaje-body p {
-                width: 80%;
-                margin: 1rem 2rem;
-            }
-            .personaje-body img {
-                max-width: 100%;
             }
         }
     }
