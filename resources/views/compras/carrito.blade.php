@@ -24,7 +24,9 @@
                         @foreach ($productos as $producto)
                             <tr>
                                 <td class="p-4 d-flex flex-column justify-content-center align-items-center">
-                                    <img src="{{ asset($producto->portada) }}" alt="Portada de {{ $producto->titulo }}">
+                                    <img src="{{ \Storage::url($producto->portada) }}" alt="Portada de {{ $producto->titulo }}">
+
+                                    {{ $producto->titulo }}
                                 </td>
                                 <td align="center" valign="middle" class="p-4">
                                 ${{ $producto->precio }}
