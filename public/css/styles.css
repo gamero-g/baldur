@@ -297,7 +297,7 @@ body {
         img {
             display: block;
             margin: auto;
-            max-width: 250px;
+            max-width: 450px;
         }
         button {
             border: none;
@@ -538,7 +538,9 @@ nav.navbar {
             mask-size: 100% 100%;
             mask-repeat: no-repeat;
             mask-position: bottom;
-
+            
+            max-width: 78%;
+            place-self: center;
        
             mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
             mask-repeat: no-repeat;
