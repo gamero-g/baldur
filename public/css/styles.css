@@ -406,7 +406,7 @@ nav.navbar {
 #home {
     .mi-fade {
         filter: grayscale(1);
-        margin-top: -4.7rem;
+        /* margin-top: -4.7rem; */
         width: 100%;
         position: relative;
         z-index: 1;
