@@ -97,7 +97,7 @@
                             <div class="container">
                                 <h3 class="text-center">{{ $game->titulo }}</h3>
                                 <div>
-                                    <img src="{{ asset($game->portada) }}" class="img-fluid" alt="Portada de {{ $game->titulo }}">
+                                    <img src="{{ \Storage::url($game->portada) }}" class="img-fluid" alt="Portada de {{ $game->titulo }}">
                                 </div>
                             </div>
                         </div>                   

@@ -11,7 +11,7 @@
             @foreach ($games as $game)
                 <article>
                     <a href="{{ route('games.details', ['id' => $game->juego_id]) }}" class="d-flex align-items-center text-decoration-none text-light flex-column flex-md-row">
-                        <img src="{{ asset($game->portada) }}" alt="Portada de {{ $game->titulo }}">
+                        <img src="{{ \Storage::url($game->portada) }}" alt="Portada de {{ $game->titulo }}">
                         <h2>{{ $game->titulo }}</h2>
                     </a>
                 </article>
