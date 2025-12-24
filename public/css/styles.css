@@ -474,7 +474,7 @@ nav.navbar {
 
         img {
             max-width: 50%;
-            transform: translateX(250px);
+            /* transform: translateX(250px); */
         }
 
         .triangulo {
@@ -547,6 +547,23 @@ nav.navbar {
             mask-size: 100% 100%;
             mask-position: center;
         }
+        .personaje-body{
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .personaje-body .personaje-img{
+            width: 45%;
+            max-width: 450px;
+            height: auto;
+            transform: none !important;
+        }
+        .personaje-body .personaje-text{
+            flex: 1;
+            margin: 0;
+            max-width: 60ch;
+        }
     }
 
     #section-3 {
@@ -572,30 +589,7 @@ nav.navbar {
 
             }
         }
-        /* #digital {
-          
-            
-           
 
-            
-        }
-
-        #fisico {
-            background-image: url('../img/faq-background.webp');
-            filter: grayscale(1);
-            border-top: 2px solid #ffffff;
-             &:hover {
-                filter: grayscale(0);
-            }
-
-            img {
-                transition: all .3s ease-in-out;
-            }
-
-            &:hover img {
-                transform: translateY(-50px);
-            }
-        } */
 
         h3 {
             font-size: 3rem;
@@ -615,10 +609,6 @@ nav.navbar {
         }
         
     }
-
-    /* #carouselPersonajes {
-        border-bottom: 2px solid white;
-    } */
 
 
     #section-4 {
@@ -909,50 +899,6 @@ nav.navbar {
             z-index: -1;
         }
     }
-    /* #Física {
-        height: 100vh;
-        position: relative;
-        z-index: 1;
-    }
-    #Digital {
-         position: relative;
-        z-index: 1;
-    } */
-    /* #Digital::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-image: url('../img/buy-now-background.webp');
-        background-size: cover;
-        -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
-        -webkit-mask-repeat: no-repeat;
-        -webkit-mask-size: cover;
-        mask-image: url('../img/mask/buy-now-background-mask.webp');
-        mask-repeat: no-repeat;
-        mask-size: 180% 100%;
-        z-index: -1;
-    }
-    #Física::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-image: url('../img/faq-background.webp');
-        background-size: cover;
-        -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
-        -webkit-mask-repeat: no-repeat;
-        -webkit-mask-size: cover;
-        mask-image: url('../img/mask/buy-now-background-mask.webp');
-        mask-repeat: no-repeat;
-        mask-size: 180% 100%;
-        z-index: -1;
-    } */
-    
-    /* .mask {
-        mask-image: url('../img/mask/buy-now-background-mask.webp');
-        mask-size: 150% 100%;
-        mask-repeat: no-repeat;
-        mask-position: center;
-    } */
     h1 {
         font-size: 3rem;
         color: rgb(0, 0, 0);
@@ -1255,131 +1201,6 @@ nav.navbar {
         transform: translateY(0);
     }
 }
-
-/* #home {
-    #section-1 {
-        > div:first-child {
-            position: relative;
-            video {
-                width: 100%;
-                height: 80dvh;
-                object-fit: cover;
-            } 
-            &::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 80dvh;
-            background: rgba(0, 0, 0, 0.815);
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        }
-        > div:last-child {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: fit-content;
-            color: white;
-        }
-    }
-
-    #section-2 {
-        > div {
-            height: 70dvh;
-            background-image: url('../img/logitech-pro-x-superlight-mouse-07.jpg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            position: relative;
-
-            &::after {
-                content: '';
-                display: block;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                background: radial-gradient(circle at center, rgba(66, 10, 62, 0.699) , black 40%);
-                z-index: 0;
-            }
-            h2 {
-                position: relative;
-                z-index: 1;
-            }
-            p {
-                position: relative;
-                z-index: 1;
-                max-width: 60ch;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 3rem;
-            }
-        }
-      
-        p {
-            color: rgb(250, 250, 250);
-        }
-    }
-
-    #section-3 {
-        height: 100dvh;
-        background-image: url('../img/mouse-creojpg.jpg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        h2 {
-            padding-top: 10rem;
-        }
-        .mitooltip {
-            background: rgba(255, 255, 255, 0.849);
-            border: 5px solid rgba(204, 204, 204, 0.767);
-    
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            max-width: 100%;
-        }
-        .tool1 {
-            transform: translateX(58dvw) translateY(25dvh);
-            animation: tooltips 5s infinite;
-        }
-        .tool2 {
-            transform: translateX(65dvw) translateY(35dvh);
-            animation: tooltips 5s infinite;
-        }
-        .tool3 {
-            transform: translateX(35dvw) translateY(38dvh);
-            animation: tooltips 5s infinite;
-        }
-    }
-}
-
-@keyframes tooltips {
-    0%, 100% {
-        border: 5px solid rgba(71, 11, 184, 0.767);
-    } 25% {
-        border: 6px solid rgba(171, 1, 177, 0.767);
-    } 50% {
-        border: 5px solid rgba(189, 49, 49, 0.767);
-    } 75% {
-        border: 6px solid rgba(126, 0, 88, 0.767);
-    }
-}  */
-
-/* @media (min-width: 481px) {
-    #home {
-        #section-1 {
-            > div:last-child {
-                left: 15dvw;
-            }
-        }
-    }
-
-} */
 
 
 .border-red {
